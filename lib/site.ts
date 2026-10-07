@@ -16,6 +16,9 @@ export const ROME_NAME = "로마이야기";
 export const GREECE_URL = "https://greece-stories.vercel.app";
 export const GREECE_NAME = "그리스이야기";
 
+export const TIMELINE_URL = "https://nadoo-timeline.vercel.app";
+export const TIMELINE_NAME = "나두연표";
+
 export const COUPANG_URL = "https://link.coupang.com/a/hsdzLh1vB6";
 
 /** Shared label for the sister-site group, matching 나두신화. */
@@ -39,6 +42,12 @@ export const SISTERS = [
     name: ROME_NAME,
     en: "Rome",
     desc: "클레오파트라, 카이사르, 악티움. 이집트가 로마의 곡물 창고가 된 뒤의 정치.",
+  },
+  {
+    href: TIMELINE_URL,
+    name: TIMELINE_NAME,
+    en: "Timeline",
+    desc: "세계사 vs 한반도 비교 연표. 피라미드를 쌓던 해에 한반도에서는 무슨 일이 있었는지.",
   },
 ] as const;
 
