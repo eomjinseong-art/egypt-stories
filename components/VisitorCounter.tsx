@@ -1,0 +1,42 @@
+"use client";
+
+import { useEffect, useState } from "react";
+
+const STORAGE_KEY = "egypt-stories-visit-day";
+const NAMESPACE = "egypt-stories";
+const KEY = "visits";
+
+export function VisitorCounter() {
+  const [count, setCount] = useState<number | null>(null);
+
+  useEffect(() => {
+    const today = new Date().toLocaleDateString("en-CA");
+    const last = localStorage.getItem(STORAGE_KEY);
+    const path = last === today ? "get" : "hit";
+
+    fetch(`https://abacus.jasoncameron.dev/${path}/${NAMESPACE}/${KEY}`)
+      .then((res) => (res.ok ? res.json() : Promise.reject(res)))
+      .then((data: { value?: number }) => {
+        if (typeof data.value === "number") setCount(data.value);
+        if (last !== today) localStorage.setItem(STORAGE_KEY, today);
+      })
+      .catch(() => {
+        /* counter is decorative */
+      });
+  }, []);
+
+  if (count === null) {
+    return (
+      <span className="inline-flex items-center gap-1 text-xs text-muted" aria-label="방문자">
+        👁
+      </span>
+    );
+  }
+
+  return (
+    <span className="inline-flex items-center gap-1 text-xs text-muted tabular-nums" aria-label={`방문자 ${count.toLocaleString("ko-KR")}명`}>
+      <span aria-hidden>👁</span>
+      {count.toLocaleString("ko-KR")}
+    </span>
+  );
+}
