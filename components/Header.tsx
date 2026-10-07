@@ -2,18 +2,13 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { SisterLinkBar } from "@/components/SisterLinks";
 import { VisitorCounter } from "@/components/VisitorCounter";
-import { GREECE_NAME, GREECE_URL, MYTH_NAME, MYTH_URL, NAV, ROME_NAME, ROME_URL, SITE_NAME, SITE_NAME_EN } from "@/lib/site";
+import { NAV, SITE_NAME, SITE_NAME_EN } from "@/lib/site";
 
 function active(pathname: string, href: string) {
   return pathname === href || pathname.startsWith(`${href}/`);
 }
-
-const SISTERS = [
-  { href: MYTH_URL, label: MYTH_NAME },
-  { href: ROME_URL, label: ROME_NAME },
-  { href: GREECE_URL, label: GREECE_NAME },
-] as const;
 
 export function Header() {
   const pathname = usePathname();
@@ -31,17 +26,11 @@ export function Header() {
           </span>
         </Link>
         <div className="ml-auto flex items-center gap-3">
-          <nav aria-label="자매 사이트" className="hidden items-center gap-3 lg:flex">
-            {SISTERS.map((item) => (
-              <a key={item.href} href={item.href} className="text-xs text-muted underline decoration-line underline-offset-4 hover:text-nile" rel="noopener noreferrer">
-                {item.label}
-              </a>
-            ))}
-          </nav>
           <VisitorCounter />
         </div>
       </div>
-      <nav aria-label="주요 메뉴" className="mx-auto flex max-w-6xl gap-1 overflow-x-auto px-3 pb-2">
+      <SisterLinkBar />
+      <nav aria-label="주요 메뉴" className="mx-auto flex max-w-6xl gap-1 overflow-x-auto px-3 pb-2 pt-2">
         {NAV.map((item) => {
           const on = active(pathname, item.href);
           return (

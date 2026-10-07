@@ -1,12 +1,7 @@
 import Link from "next/link";
 import { CoupangBanner } from "@/components/CoupangBanner";
-import { BRAND_LINE, GREECE_NAME, GREECE_URL, MYTH_NAME, MYTH_URL, NAV, ROME_NAME, ROME_URL, SITE_NAME } from "@/lib/site";
-
-const SISTERS = [
-  { href: MYTH_URL, label: MYTH_NAME },
-  { href: ROME_URL, label: ROME_NAME },
-  { href: GREECE_URL, label: GREECE_NAME },
-] as const;
+import { SisterLinkList } from "@/components/SisterLinks";
+import { BRAND_LINE, NAV, SITE_NAME } from "@/lib/site";
 
 export function Footer() {
   return (
@@ -21,7 +16,8 @@ export function Footer() {
           </p>
           <p>전설은 전설이라고 적습니다. 영화 제목과 상표는 각 권리자의 것입니다. 영화를 볼 수 있는 불법 사이트는 안내하지 않습니다.</p>
         </div>
-        <nav className="mt-4 flex flex-wrap gap-x-4 gap-y-2 text-xs">
+        <SisterLinkList />
+        <nav aria-label="사이트 메뉴" className="mt-4 flex flex-wrap gap-x-4 gap-y-2 text-xs">
           <Link href="/" className="underline decoration-line underline-offset-4 hover:text-nile">
             홈
           </Link>
@@ -29,11 +25,6 @@ export function Footer() {
             <Link key={item.href} href={item.href} className="underline decoration-line underline-offset-4 hover:text-nile">
               {item.label}
             </Link>
-          ))}
-          {SISTERS.map((item) => (
-            <a key={item.href} href={item.href} className="underline decoration-line underline-offset-4 hover:text-nile" rel="noopener noreferrer">
-              {item.label}
-            </a>
           ))}
         </nav>
       </div>

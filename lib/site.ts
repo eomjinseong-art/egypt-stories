@@ -18,6 +18,9 @@ export const GREECE_NAME = "그리스이야기";
 
 export const COUPANG_URL = "https://link.coupang.com/a/hsdzLh1vB6";
 
+/** Shared label for the sister-site group, matching 나두신화. */
+export const FAMILY_LABEL = "나두 역사·신화";
+
 export const SISTERS = [
   {
     href: MYTH_URL,
@@ -26,16 +29,16 @@ export const SISTERS = [
     desc: "그리스·로마 신화. 이집트 신과 이름이 겹치는 곳만 여기서 잇습니다.",
   },
   {
-    href: ROME_URL,
-    name: ROME_NAME,
-    en: "Rome",
-    desc: "클레오파트라, 카이사르, 악티움. 이집트가 로마의 곡물 창고가 된 뒤의 정치.",
-  },
-  {
     href: GREECE_URL,
     name: GREECE_NAME,
     en: "Greece",
     desc: "알렉산드로스와 그리스 세계. 이집트 입성은 그 길의 한 구간입니다.",
+  },
+  {
+    href: ROME_URL,
+    name: ROME_NAME,
+    en: "Rome",
+    desc: "클레오파트라, 카이사르, 악티움. 이집트가 로마의 곡물 창고가 된 뒤의 정치.",
   },
 ] as const;
 
