@@ -4,7 +4,7 @@ import { eras } from "@/data/eras";
 import { rulers } from "@/data/rulers";
 import { wars } from "@/data/wars";
 import { jsonLd, pageMetadata, websiteLd } from "@/lib/seo";
-import { BRAND_LINE, GREECE_NAME, GREECE_URL, HOME_SECTIONS, MYTH_NAME, MYTH_URL, ROME_NAME, ROME_URL, SITE_SUB, SITE_TAGLINE, SISTERS } from "@/lib/site";
+import { BRAND_LINE, FAMILY_LABEL, GREECE_NAME, GREECE_URL, HOME_SECTIONS, MYTH_NAME, MYTH_URL, ROME_NAME, ROME_URL, SITE_SUB, SITE_TAGLINE, SISTERS } from "@/lib/site";
 
 export const metadata = pageMetadata({
   title: "홈",
@@ -40,14 +40,14 @@ export default function Home() {
           <Link href="/origins" className="rounded-full bg-nile px-4 py-2 text-white hover:bg-nile-deep">
             시대부터 보기
           </Link>
-          <a href={MYTH_URL} className="rounded-full border border-line bg-card px-4 py-2 hover:border-nile" rel="noopener noreferrer">
+          <a href={MYTH_URL} className="rounded-full border border-line bg-card px-4 py-2 hover:border-nile" target="_blank" rel="noopener noreferrer">
             {MYTH_NAME}
           </a>
-          <a href={ROME_URL} className="rounded-full border border-line bg-card px-4 py-2 hover:border-nile" rel="noopener noreferrer">
-            {ROME_NAME}
-          </a>
-          <a href={GREECE_URL} className="rounded-full border border-line bg-card px-4 py-2 hover:border-nile" rel="noopener noreferrer">
+          <a href={GREECE_URL} className="rounded-full border border-line bg-card px-4 py-2 hover:border-nile" target="_blank" rel="noopener noreferrer">
             {GREECE_NAME}
+          </a>
+          <a href={ROME_URL} className="rounded-full border border-line bg-card px-4 py-2 hover:border-nile" target="_blank" rel="noopener noreferrer">
+            {ROME_NAME}
           </a>
         </div>
       </section>
@@ -55,19 +55,23 @@ export default function Home() {
       <div className="dentil opacity-50" aria-hidden />
 
       <section className="mt-10" aria-labelledby="sisters-heading">
-        <h2 id="sisters-heading" className="font-serif text-2xl text-ink">
+        <p className="font-serif text-xs tracking-[0.18em] text-gold">{FAMILY_LABEL}</p>
+        <h2 id="sisters-heading" className="mt-1 font-serif text-2xl text-ink">
           나두의 다른 이야기
         </h2>
-        <p className="mt-1 text-sm text-muted">이집트는 혼자 떨어진 박물관이 아닙니다. 신화, 로마, 그리스와 맞닿은 곳만 자매 사이트로 넘어갑니다.</p>
-        <div className="mt-4 grid gap-4 lg:grid-cols-3">
+        <p className="mt-1 text-sm text-muted">이집트는 혼자 떨어진 박물관이 아닙니다. 신화, 그리스, 로마와 맞닿은 곳만 자매 사이트로 넘어갑니다.</p>
+        <ul className="mt-4 grid gap-4 lg:grid-cols-3">
           {SISTERS.map((site) => (
-            <a key={site.href} href={site.href} className="rounded-lg border border-line bg-card p-5 hover:border-nile" rel="noopener noreferrer">
-              <p className="text-[11px] tracking-[0.16em] text-gold">{site.en}</p>
-              <h3 className="mt-1 font-serif text-2xl text-ink">{site.name}</h3>
-              <p className="mt-3 text-sm leading-6 text-muted">{site.desc}</p>
-            </a>
+            <li key={site.href}>
+              <a href={site.href} target="_blank" rel="noopener noreferrer" className="block h-full rounded-lg border border-line bg-card p-5 hover:border-nile">
+                <p className="text-[11px] tracking-[0.16em] text-gold">{site.en}</p>
+                <h3 className="mt-1 font-serif text-2xl text-ink">{site.name}</h3>
+                <p className="mt-3 text-sm leading-6 text-muted">{site.desc}</p>
+                <span className="sr-only"> (새 창)</span>
+              </a>
+            </li>
           ))}
-        </div>
+        </ul>
       </section>
 
       <section className="mt-12" aria-labelledby="era-heading">

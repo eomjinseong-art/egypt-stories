@@ -68,7 +68,7 @@ export const rulers: readonly Ruler[] = [
       { work: "조세르 동상 받침대 명문", ref: "임호테프의 이름과 직함" },
       { work: "마네토 전승", ref: "토소르트로스·임호테프에 대한 후대 기억" },
     ],
-    movieSlugs: ["the-mummy-1999", "the-mummy-1932"],
+    movieSlugs: ["the-mummy-1999", "the-mummy-1932", "secrets-of-the-saqqara-tomb"],
     related: [
       { href: "/monuments#pyramids", label: "피라미드" },
       { href: "/movies#the-mummy-1999", label: "영화 속 임호테프는 다른 인물" },
