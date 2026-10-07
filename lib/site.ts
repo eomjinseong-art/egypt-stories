@@ -108,7 +108,7 @@ export const HOME_SECTIONS = [
     href: "/movies",
     en: "Films",
     title: "관련 영화",
-    desc: "미이라, 클레오파트라, 이집트 왕자, 출애굽 영화. 어디가 창작인지 같이 적습니다.",
+    desc: "미이라, 클레오파트라, 이집트 왕자, 출애굽 영화, 사카라 발굴 다큐멘터리. 어디가 창작인지 같이 적습니다.",
   },
   {
     href: "/sources",

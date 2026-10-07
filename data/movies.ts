@@ -114,6 +114,22 @@ export const movies: readonly Movie[] = [
       { href: "https://greece-stories.vercel.app", label: "그리스이야기" },
     ],
   },
+  {
+    slug: "secrets-of-the-saqqara-tomb",
+    titleKo: "사카라 무덤의 비밀",
+    titleOriginal: "Secrets of the Saqqara Tomb",
+    year: "2020",
+    kind: "다큐멘터리",
+    platform: "Netflix",
+    why: "넷플릭스가 2020년에 공개한 다큐멘터리입니다. 사카라에서 이집트 발굴팀이 고왕국 제5왕조 사제 와흐티에의 무덤을 살피는 과정을 따라갑니다. 저주가 나오는 모험 영화와 달리, 무덤이 어떻게 열리고 이름이 어떻게 읽히는지에 가깝습니다.",
+    fiction: "해설은 그 발굴의 이야기입니다. 사카라의 모든 무덤을 한 시대로 묶지 않습니다. 조세르의 계단식 피라미드도 사카라에 있지만, 이 작품의 주인공 무덤은 그 피라미드보다 뒤인 제5왕조입니다. 신왕국 왕이 묻힌 왕가의 계곡과도 장소와 시대가 다릅니다. 화면의 감탄을 발굴 일지 전체로 외우지는 마세요.",
+    topics: ["monuments"],
+    links: [
+      { href: "/monuments#pyramids", label: "사카라의 계단식 피라미드" },
+      { href: "/monuments#tombs", label: "무덤" },
+      { href: "/rulers/djoser", label: "조세르" },
+    ],
+  },
 ];
 
 const bySlug = new Map(movies.map((movie) => [movie.slug, movie]));

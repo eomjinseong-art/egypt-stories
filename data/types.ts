@@ -19,7 +19,8 @@ export type Movie = {
   titleKo: string;
   titleOriginal: string;
   year: string;
-  kind: "영화" | "애니메이션";
+  kind: "영화" | "애니메이션" | "다큐멘터리";
+  platform?: string;
   why: string;
   fiction: string;
   topics: readonly MovieTopic[];
