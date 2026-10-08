@@ -60,8 +60,8 @@ export default function Home() {
         <h2 id="sisters-heading" className="mt-1 font-serif text-2xl text-ink">
           나두의 다른 이야기
         </h2>
-        <p className="mt-1 text-sm text-muted">이집트는 혼자 떨어진 박물관이 아닙니다. 신화, 그리스, 로마와 맞닿은 곳만 자매 사이트로 넘어갑니다.</p>
-        <ul className="mt-4 grid gap-4 lg:grid-cols-3">
+        <p className="mt-1 text-sm text-muted">이집트는 혼자 떨어진 박물관이 아닙니다. 나두 역사·신화의 다른 이야기와, 맞닿는 장면만 각 글에서 잇습니다.</p>
+        <ul className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {SISTERS.map((site) => (
             <li key={site.href}>
               <a href={site.href} target="_blank" rel="noopener noreferrer" className="block h-full rounded-lg border border-line bg-card p-5 hover:border-nile">

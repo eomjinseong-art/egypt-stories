@@ -22,7 +22,7 @@ export function MovieCard({ movie }: { movie: Movie }) {
                 {link.label}
               </Link>
             ) : (
-              <a key={link.href} href={link.href} className="text-nile underline decoration-line underline-offset-4 hover:text-gold" rel="noopener noreferrer">
+              <a key={link.href} href={link.href} target="_blank" rel="noopener noreferrer" className="text-nile underline decoration-line underline-offset-4 hover:text-gold">
                 {link.label}
               </a>
             ),

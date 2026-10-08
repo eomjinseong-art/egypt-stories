@@ -55,7 +55,7 @@ export default function GodsPage() {
                       {link.label}
                     </Link>
                   ) : (
-                    <a key={link.href} href={link.href} className="text-nile underline decoration-line underline-offset-4 hover:text-gold" rel="noopener noreferrer">
+                    <a key={link.href} href={link.href} target="_blank" rel="noopener noreferrer" className="text-nile underline decoration-line underline-offset-4 hover:text-gold">
                       {link.label}
                     </a>
                   ),
@@ -72,7 +72,7 @@ export default function GodsPage() {
 
       <p className="mt-8 max-w-3xl text-sm leading-7 text-muted">
         기자의 큰 스핑크스는 왕의 상입니다. 오이디푸스 이야기의 스핑크스와 다릅니다. 그 그리스 이야기는{" "}
-        <a href={`${MYTH_URL}/gods/sphinx`} className="text-nile underline decoration-line underline-offset-4 hover:text-gold" rel="noopener noreferrer">
+        <a href={`${MYTH_URL}/gods/sphinx`} target="_blank" rel="noopener noreferrer" className="text-nile underline decoration-line underline-offset-4 hover:text-gold">
           {MYTH_NAME}
         </a>
         에 있습니다. 유적 쪽 구분은 <Link href="/monuments#sphinx" className="text-nile underline decoration-line underline-offset-4 hover:text-gold">스핑크스</Link> 글에 있습니다.

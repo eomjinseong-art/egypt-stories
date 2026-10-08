@@ -1,5 +1,5 @@
 import type { Region } from "@/data/types";
-import { MYTH_URL } from "@/lib/site";
+import { GREECE_URL, MYTH_URL, PHILOSOPHY_URL } from "@/lib/site";
 
 export const regions: readonly Region[] = [
   {
@@ -122,7 +122,11 @@ export const regions: readonly Region[] = [
           "클레오파트라 7세의 정치도 여기서 많이 벌어집니다. 로마 장군들과의 관계는 [클레오파트라](/cleopatra)에서 이어집니다.",
           "도시 아래 고대 왕궁 구역은 오늘날 일부 바다 밑에 있습니다. 지진과 지반 침하 때문입니다. 영화의 궁전 세트를 발굴 도면으로 보면 안 됩니다.",
         ],
-        links: [{ href: "/cleopatra", label: "클레오파트라" }],
+        links: [
+          { href: "/cleopatra", label: "클레오파트라" },
+          { href: `${PHILOSOPHY_URL}/people/hypatia`, label: "철학이야기 · 히파티아" },
+          { href: `${GREECE_URL}/movies#agora`, label: "그리스이야기 · 아고라" },
+        ],
       },
       {
         id: "giza",

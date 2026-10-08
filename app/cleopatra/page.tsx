@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { Elsewhere } from "@/components/Elsewhere";
 import { GuideBlock } from "@/components/GuideBlock";
 import { JsonLd } from "@/components/JsonLd";
 import { PageHead } from "@/components/PageHead";
@@ -51,7 +52,9 @@ export default function CleopatraPage() {
             points={section.points}
             more={section.more}
             kind={section.kind}
-          />
+          >
+            <Elsewhere links={section.elsewhere} />
+          </GuideBlock>
         ))}
       </div>
       <p className="mt-6 text-sm leading-7">

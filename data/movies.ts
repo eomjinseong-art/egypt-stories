@@ -1,4 +1,5 @@
 import type { Movie, MovieTopic } from "@/data/types";
+import { CHOSEN_URL, GREECE_URL, PERSIA_URL, PHILOSOPHY_URL, ROME_URL } from "@/lib/site";
 
 export const movies: readonly Movie[] = [
   {
@@ -43,7 +44,8 @@ export const movies: readonly Movie[] = [
       { href: "/cleopatra", label: "클레오파트라와 로마" },
       { href: "/rulers/cleopatra-vii", label: "클레오파트라 7세" },
       { href: "/wars/rome", label: "로마의 병합" },
-      { href: "https://rome-stories.vercel.app/cleopatra", label: "로마이야기 · 클레오파트라" },
+      { href: `${ROME_URL}/cleopatra`, label: "로마이야기 · 클레오파트라" },
+      { href: `${ROME_URL}/movies#cleopatra-1963`, label: "로마이야기 · 영화 클레오파트라" },
     ],
   },
   {
@@ -58,6 +60,7 @@ export const movies: readonly Movie[] = [
     links: [
       { href: "/rulers/ramesses-ii", label: "람세스 2세" },
       { href: "/movies#the-ten-commandments", label: "실사 출애굽 영화" },
+      { href: `${CHOSEN_URL}/together/prince-of-egypt`, label: "더 초즌 · 이집트 왕자" },
     ],
   },
   {
@@ -72,6 +75,7 @@ export const movies: readonly Movie[] = [
     links: [
       { href: "/rulers/ramesses-ii", label: "람세스 2세" },
       { href: "/monuments#pyramids", label: "피라미드의 시대" },
+      { href: `${CHOSEN_URL}/together/the-ten-commandments-1956`, label: "더 초즌 · 십계" },
     ],
   },
   {
@@ -86,6 +90,7 @@ export const movies: readonly Movie[] = [
     links: [
       { href: "/rulers/ramesses-ii", label: "람세스 2세" },
       { href: "/wars/kadesh", label: "카데시" },
+      { href: `${CHOSEN_URL}/together/exodus-gods-and-kings`, label: "더 초즌 · 엑소더스: 신들과 왕들" },
     ],
   },
   {
@@ -111,7 +116,9 @@ export const movies: readonly Movie[] = [
     links: [
       { href: "/wars/alexander", label: "알렉산드로스" },
       { href: "/origins#ptolemaic", label: "프톨레마이오스 시대" },
-      { href: "https://greece-stories.vercel.app", label: "그리스이야기" },
+      { href: `${GREECE_URL}/movies#alexander`, label: "그리스이야기 · 알렉산더" },
+      { href: `${PERSIA_URL}/movies#alexander-2004`, label: "페르시아이야기 · 알렉산더" },
+      { href: `${PHILOSOPHY_URL}/films#films-aristotle`, label: "철학이야기 · 아리스토텔레스" },
     ],
   },
   {

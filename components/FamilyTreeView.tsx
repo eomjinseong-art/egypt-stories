@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useId, useMemo, useRef, useState } from "react";
+import { Elsewhere } from "@/components/Elsewhere";
 import {
   FAMILY_CHARTS,
   exactNode,
@@ -336,6 +337,7 @@ export function FamilyTreeView() {
           </div>
           <p className="mt-2 text-sm leading-6 text-ink">{selectedNode.summary}</p>
           {selectedNode.note ? <p className="mt-2 text-xs leading-5 text-dusk">불확실·다른 전승: {selectedNode.note}</p> : null}
+          <Elsewhere links={selectedNode.also} />
           <div className="mt-3 space-y-2 text-sm">
             <PeopleRow
               label="부모"

@@ -1,9 +1,11 @@
-import type { Guide, Kind } from "@/data/types";
+import type { Guide, Kind, LinkItem } from "@/data/types";
+import { CHOSEN_URL, PERSIA_URL, TIMELINE_URL } from "@/lib/site";
 
 export type Era = Guide & {
   id: string;
   years: string;
   kind: Kind;
+  elsewhere?: readonly LinkItem[];
 };
 
 export const eras: readonly Era[] = [
@@ -78,6 +80,10 @@ export const eras: readonly Era[] = [
       "출애굽 영화가 람세스를 파라오로 고르는 일이 많습니다. 히브리 성경은 그 왕의 이름을 적지 않습니다. 신왕국의 어느 해에 그 규모의 탈출이 있었는지도 이집트 기록으로는 확인되지 않았습니다. 신앙의 이야기와 왕실 연대기는 다른 갈래입니다. 영화 구분은 [관련 영화](/movies)에 있습니다.",
       "신왕국이 끝난 뒤 제3중간기(대략 기원전 1069–664년)에는 리비아계·누비아계 왕조가 나뉩니다. 다음 칸은 그 뒤를 받아 보통 ‘후기’라고 부르는 시간입니다.",
     ],
+    elsewhere: [
+      { href: `${CHOSEN_URL}/bible-books/exodus`, label: "더 초즌 · 출애굽기" },
+      { href: `${TIMELINE_URL}/events/exodus-tradition`, label: "나두연표 · 출애굽 전승" },
+    ],
   },
   {
     id: "late-period",
@@ -96,6 +102,7 @@ export const eras: readonly Era[] = [
       "페르시아 통치에는 이집트인의 반란이 여러 번 끼어 있습니다. 한 번 정복하고 끝이 아닙니다. 전투의 뼈대는 [페르시아](/wars/persia)에 있습니다.",
       "헤로도토스가 캄비세스를 신성 모독자로 그린 이야기와, 캄비세스 시대에 아피스 황소가 정식으로 묻힌 기록이 함께 있습니다. 한쪽 일화만으로 성격을 닫지 않는 편이 안전합니다.",
     ],
+    elsewhere: [{ href: `${PERSIA_URL}/rulers/cambyses-ii`, label: "페르시아이야기 · 캄비세스 2세" }],
   },
   {
     id: "ptolemaic",

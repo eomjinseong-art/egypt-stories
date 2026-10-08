@@ -1,5 +1,5 @@
 import type { Ruler, RulerGroup } from "@/data/types";
-import { ROME_URL } from "@/lib/site";
+import { CHOSEN_URL, ROME_URL, TIMELINE_URL } from "@/lib/site";
 
 export const GROUP_LABEL: Record<RulerGroup, { title: string; note: string }> = {
   early: { title: "통일과 고왕국", note: "왕조가 시작되고 피라미드가 커진 시기. 이른 연대는 눈금이 거칠습니다." },
@@ -40,6 +40,7 @@ export const rulers: readonly Ruler[] = [
     related: [
       { href: "/origins#predynastic", label: "선왕조" },
       { href: "/map#two-lands", label: "두 땅" },
+      { href: `${TIMELINE_URL}/events/unification-of-egypt`, label: "나두연표 · 이집트 통일" },
     ],
   },
   {
@@ -105,6 +106,7 @@ export const rulers: readonly Ruler[] = [
     related: [
       { href: "/monuments#pyramids", label: "피라미드" },
       { href: "/map#giza", label: "기자" },
+      { href: `${TIMELINE_URL}/events/great-pyramid`, label: "나두연표 · 대피라미드" },
     ],
   },
   {
@@ -232,6 +234,7 @@ export const rulers: readonly Ruler[] = [
       { href: "/family-tree?tab=d18&focus=akhenaten", label: "가족관계도" },
       { href: "/gods#aten", label: "아텐" },
       { href: "/rulers/tutankhamun", label: "투탕카멘" },
+      { href: `${TIMELINE_URL}/events/akhenaten`, label: "나두연표 · 아케나텐" },
     ],
   },
   {
@@ -301,6 +304,8 @@ export const rulers: readonly Ruler[] = [
       { href: "/wars/kadesh", label: "카데시" },
       { href: "/monuments#temples", label: "아부심벨" },
       { href: "/movies", label: "출애굽 영화 구분" },
+      { href: `${CHOSEN_URL}/bible-books/exodus`, label: "더 초즌 · 출애굽기" },
+      { href: `${CHOSEN_URL}/together/prince-of-egypt`, label: "더 초즌 · 이집트 왕자" },
     ],
   },
   {
@@ -394,7 +399,9 @@ export const rulers: readonly Ruler[] = [
       { href: "/family-tree?tab=ptolemy&focus=cleopatra-vii", label: "가족관계도" },
       { href: "/cleopatra", label: "클레오파트라와 로마" },
       { href: "/wars/rome", label: "로마의 병합" },
-      { href: `${ROME_URL}/cleopatra`, label: "로마이야기" },
+      { href: `${ROME_URL}/cleopatra`, label: "로마이야기 · 클레오파트라" },
+      { href: `${ROME_URL}/family-tree?tree=julio&focus=cleopatra`, label: "로마이야기 · 클레오파트라의 가계" },
+      { href: `${TIMELINE_URL}/events/end-of-cleopatra`, label: "나두연표 · 클레오파트라의 마지막" },
     ],
   },
 ];

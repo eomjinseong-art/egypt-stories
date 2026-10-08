@@ -2,7 +2,9 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { JsonLd } from "@/components/JsonLd";
 import { MovieCard } from "@/components/RelatedMovies";
 import { PageHead } from "@/components/PageHead";
+import { SisterCrossLinks } from "@/components/SisterLinks";
 import { movies } from "@/data/movies";
+import { OTHER_FILMS } from "@/lib/site";
 import { breadcrumbLd, itemListLd, jsonLd, pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
@@ -38,6 +40,7 @@ export default function MoviesPage() {
           <MovieCard key={movie.slug} movie={movie} />
         ))}
       </ul>
+      <SisterCrossLinks title="다른 사이트의 영화" en="Films on sister sites" links={OTHER_FILMS} />
     </div>
   );
 }

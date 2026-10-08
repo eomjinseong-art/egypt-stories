@@ -1,5 +1,5 @@
 import type { War } from "@/data/types";
-import { GREECE_URL, ROME_URL } from "@/lib/site";
+import { GREECE_URL, PERSIA_URL, ROME_URL } from "@/lib/site";
 
 export const wars: readonly War[] = [
   {
@@ -145,6 +145,7 @@ export const wars: readonly War[] = [
     related: [
       { href: "/origins#late-period", label: "후기" },
       { href: "/wars/alexander", label: "알렉산드로스" },
+      { href: `${PERSIA_URL}/rulers/cambyses-ii`, label: "페르시아이야기 · 캄비세스 2세" },
     ],
   },
   {
@@ -163,7 +164,7 @@ export const wars: readonly War[] = [
     ],
     more: [
       "아리아노스, 플루타르코스, 디오도로스, 쿠르티우스가 이 원정의 주요 고대 전기입니다. 모두 사건보다 나중 글이고, 초인적인 일화를 포함합니다. 신탁의 대사를 지어 인용하지 않습니다.",
-      "그리스 세계 전체의 알렉산드로스는 [그리스이야기](https://greece-stories.vercel.app)의 갈래입니다. 여기서는 이집트에 들어온 해와 그 결과만 잡습니다.",
+      "그리스 세계 전체의 알렉산드로스는 [그리스이야기의 알렉산드로스](https://greece-stories.vercel.app/people/alexander)의 갈래입니다. 여기서는 이집트에 들어온 해와 그 결과만 잡습니다.",
       "그가 죽은 뒤 제국은 부하들 사이에서 갈라집니다. 이집트를 가져간 프톨레마이오스 1세가 [프톨레마이오스 시대](/origins#ptolemaic)의 첫 왕입니다.",
     ],
     sources: [
@@ -176,7 +177,9 @@ export const wars: readonly War[] = [
     related: [
       { href: "/map#alexandria", label: "알렉산드리아" },
       { href: "/origins#ptolemaic", label: "프톨레마이오스" },
-      { href: GREECE_URL, label: "그리스이야기" },
+      { href: `${GREECE_URL}/people/alexander`, label: "그리스이야기 · 알렉산드로스" },
+      { href: `${GREECE_URL}/wars/alexander-campaigns`, label: "그리스이야기 · 알렉산드로스의 원정" },
+      { href: `${PERSIA_URL}/wars/alexander`, label: "페르시아이야기 · 알렉산드로스의 원정" },
     ],
   },
   {

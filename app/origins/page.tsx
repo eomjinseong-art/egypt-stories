@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { Elsewhere } from "@/components/Elsewhere";
 import { GuideBlock } from "@/components/GuideBlock";
 import { JsonLd } from "@/components/JsonLd";
 import { PageHead } from "@/components/PageHead";
@@ -40,7 +41,9 @@ export default function OriginsPage() {
       />
       <div className="mt-8 space-y-4">
         {eras.map((era) => (
-          <GuideBlock key={era.id} id={era.id} en={era.en} title={era.title} summary={`${era.years}. ${era.summary}`} points={era.points} more={era.more} kind={era.kind} />
+          <GuideBlock key={era.id} id={era.id} en={era.en} title={era.title} summary={`${era.years}. ${era.summary}`} points={era.points} more={era.more} kind={era.kind}>
+            <Elsewhere links={era.elsewhere} />
+          </GuideBlock>
         ))}
       </div>
       <p className="mt-6 text-sm leading-7 text-muted">
