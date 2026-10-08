@@ -9,6 +9,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/origins",
     "/map",
     "/rulers",
+    "/family-tree",
     "/cleopatra",
     "/gods",
     "/daily",

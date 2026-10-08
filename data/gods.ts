@@ -24,7 +24,10 @@ export const gods: readonly GodCard[] = [
     egyptian: "Ra",
     summary: "태양과 연결된 신입니다. 헬리오폴리스(오늘날 카이로 북동쪽)의 큰 신이었고, 많은 창조 이야기에서 앞자리에 있습니다.",
     note: "왕 이름 안에 라가 들어가는 일이 많습니다. 낮의 태양, 저녁의 늙은 태양, 밤의 여행은 문헌마다 그림이 다릅니다. 하나의 동화 줄거리로 압축하지 않습니다.",
-    links: [{ href: "/rulers/khufu", label: "이름에 라가 있는 시대 · 쿠푸" }],
+    links: [
+      { href: "/family-tree?tab=myth&focus=atum-ra", label: "가족관계도" },
+      { href: "/rulers/khufu", label: "이름에 라가 있는 시대 · 쿠푸" },
+    ],
   },
   {
     slug: "amun",
@@ -47,6 +50,7 @@ export const gods: readonly GodCard[] = [
     summary: "죽은 자의 왕으로 널리 모셔졌습니다. 아비도스가 그의 큰 순례지였습니다. 왕도 죽으면 오시리스와 연결되기를 바랐습니다.",
     note: "그가 죽임을 당하고, 이시스가 그를 찾고, 아들 호루스가 세트와 다툰다는 큰 줄기는 이집트 주문과 플루타르코스의 글이 함께 가리킵니다. 상자, 나무, 잘린 몸의 세부처럼 플루타르코스에만 길게 나오는 장면은 이집트 전국의 유일한 정본으로 적지 않습니다.",
     links: [
+      { href: "/family-tree?tab=myth&focus=osiris", label: "가족관계도" },
       { href: "/daily#afterlife", label: "내세" },
       { href: `${MYTH_URL}/gods/dionysos`, label: "나두신화 · 디오니소스" },
     ],
@@ -59,6 +63,7 @@ export const gods: readonly GodCard[] = [
     summary: "오시리스의 짝이고 호루스의 어머니로 자주 등장합니다. 보호와 주문이 그의 큰 역할입니다. 나중에 로마 세계 전역에서 따로 모셔지기도 합니다.",
     note: "헤로도토스는 이시스를 그리스의 데메테르에 대응시킵니다. 로마 시대의 이시스 신앙은 이집트 신전 의례와 같은 내용이 그대로 수출된 것은 아닙니다. 데메테르의 딸 이야기는 나두신화에서 읽으면 됩니다.",
     links: [
+      { href: "/family-tree?tab=myth&focus=isis", label: "가족관계도" },
       { href: `${MYTH_URL}/gods/demeter`, label: "나두신화 · 데메테르" },
       { href: "https://rome-stories.vercel.app/myth-links", label: "로마이야기 · 신과 전설" },
     ],
@@ -71,6 +76,7 @@ export const gods: readonly GodCard[] = [
     summary: "매의 신이고, 살아있는 왕이 호루스와 연결되었습니다. 오시리스의 아들로서 세트와 왕위를 다투는 면도 있습니다. 둘은 완전히 같은 신화 한 편이 아닙니다.",
     note: "헤로도토스는 오시리스의 아들 호루스를 그리스 사람이 아폴론이라고 부른다고 적습니다. 아이 모습의 호루스는 나중에 그리스어로 하르포크라테스라고 불립니다. 아폴론의 그리스 이야기는 따로 있습니다.",
     links: [
+      { href: "/family-tree?tab=myth&focus=horus", label: "가족관계도" },
       { href: "/rulers", label: "살아있는 왕" },
       { href: `${MYTH_URL}/gods/apollo`, label: "나두신화 · 아폴론" },
     ],
@@ -83,6 +89,7 @@ export const gods: readonly GodCard[] = [
     summary: "사막, 폭풍, 바깥과 연결된 신입니다. 호루스와 왕위를 다투는 상대이면서, 어떤 주문에서는 태양의 배를 위협하는 존재를 막는 쪽에 섭니다.",
     note: "플루타르코스를 비롯한 그리스 전통은 세트를 티폰에 비깁니다. 티폰은 그리스 신화의 괴물이지, 이집트 신전의 세트가 그 괴물의 번역본으로 태어난 것은 아닙니다. 나두신화의 티폰은 그리스 이야기만 다룹니다.",
     links: [
+      { href: "/family-tree?tab=myth&focus=seth", label: "가족관계도" },
       { href: `${MYTH_URL}/gods/typhon`, label: "나두신화 · 티폰" },
       { href: `${MYTH_URL}/stories/typhon`, label: "나두신화 · 티폰 이야기" },
     ],
@@ -95,6 +102,7 @@ export const gods: readonly GodCard[] = [
     summary: "자칼(또는 들개) 모습으로 묘사되는, 무덤과 방부(몸을 보존하는 일)의 신입니다. 심장의 저울 장면에도 자주 나옵니다.",
     note: "로마 시대에 헤르메스와 합쳐진 헤르마누비스라는 형태가 나타납니다. 고왕국의 아누비스가 처음부터 그리스 신이었다는 뜻은 아닙니다. 헤르메스 이야기는 나두신화에 있습니다.",
     links: [
+      { href: "/family-tree?tab=myth&focus=anubis", label: "가족관계도" },
       { href: "/daily#afterlife", label: "내세의 저울" },
       { href: `${MYTH_URL}/gods/hermes`, label: "나두신화 · 헤르메스" },
     ],

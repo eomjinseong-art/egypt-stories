@@ -16,6 +16,7 @@ const PATH = [
   { href: "/origins", label: "선왕조에서 프톨레마이오스까지, 여섯 칸" },
   { href: "/map#two-lands", label: "상이집트가 왜 남쪽인지" },
   { href: "/monuments#pyramids", label: "피라미드는 누가, 왜 쌓았는지" },
+  { href: "/family-tree", label: "신과 파라오의 가족관계도" },
   { href: "/rulers/hatshepsut", label: "하트셉수트는 어떤 왕이었는지" },
   { href: "/rulers/ramesses-ii", label: "람세스 2세와 영화 속 파라오의 차이" },
   { href: "/cleopatra", label: "클레오파트라와 로마의 곡물" },

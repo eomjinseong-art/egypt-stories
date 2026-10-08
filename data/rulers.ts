@@ -164,6 +164,7 @@ export const rulers: readonly Ruler[] = [
     ],
     movieSlugs: [],
     related: [
+      { href: "/family-tree?tab=d18&focus=hatshepsut", label: "가족관계도" },
       { href: "/rulers/thutmose-iii", label: "투트모세 3세" },
       { href: "/monuments#temples", label: "신전" },
     ],
@@ -195,6 +196,7 @@ export const rulers: readonly Ruler[] = [
     ],
     movieSlugs: [],
     related: [
+      { href: "/family-tree?tab=d18&focus=thutmose-iii", label: "가족관계도" },
       { href: "/rulers/hatshepsut", label: "하트셉수트" },
       { href: "/map#karnak", label: "카르나크" },
     ],
@@ -227,6 +229,7 @@ export const rulers: readonly Ruler[] = [
     ],
     movieSlugs: [],
     related: [
+      { href: "/family-tree?tab=d18&focus=akhenaten", label: "가족관계도" },
       { href: "/gods#aten", label: "아텐" },
       { href: "/rulers/tutankhamun", label: "투탕카멘" },
     ],
@@ -259,6 +262,7 @@ export const rulers: readonly Ruler[] = [
     ],
     movieSlugs: ["the-mummy-1999"],
     related: [
+      { href: "/family-tree?tab=d18&focus=tutankhamun", label: "가족관계도" },
       { href: "/map#valley-of-the-kings", label: "왕가의 계곡" },
       { href: "/monuments#tombs", label: "무덤과 저주 이야기" },
       { href: "/rulers/akhenaten", label: "아케나텐" },
@@ -293,6 +297,7 @@ export const rulers: readonly Ruler[] = [
     ],
     movieSlugs: ["prince-of-egypt", "the-ten-commandments", "exodus-gods-and-kings"],
     related: [
+      { href: "/family-tree?tab=d19&focus=ramesses-ii", label: "가족관계도" },
       { href: "/wars/kadesh", label: "카데시" },
       { href: "/monuments#temples", label: "아부심벨" },
       { href: "/movies", label: "출애굽 영화 구분" },
@@ -386,6 +391,7 @@ export const rulers: readonly Ruler[] = [
     ],
     movieSlugs: ["cleopatra-1963"],
     related: [
+      { href: "/family-tree?tab=ptolemy&focus=cleopatra-vii", label: "가족관계도" },
       { href: "/cleopatra", label: "클레오파트라와 로마" },
       { href: "/wars/rome", label: "로마의 병합" },
       { href: `${ROME_URL}/cleopatra`, label: "로마이야기" },
