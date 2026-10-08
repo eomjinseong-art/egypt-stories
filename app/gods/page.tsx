@@ -66,6 +66,10 @@ export default function GodsPage() {
         ))}
       </ul>
 
+      <p className="mt-8 max-w-3xl text-sm leading-7">
+        아툼-라에서 호루스·아누비스까지의 부모 관계는 <Link href="/family-tree?tab=myth" className="text-nile underline decoration-line underline-offset-4 hover:text-gold">가족관계도</Link>에 모았습니다. 그 탭은 신화입니다.
+      </p>
+
       <p className="mt-8 max-w-3xl text-sm leading-7 text-muted">
         기자의 큰 스핑크스는 왕의 상입니다. 오이디푸스 이야기의 스핑크스와 다릅니다. 그 그리스 이야기는{" "}
         <a href={`${MYTH_URL}/gods/sphinx`} className="text-nile underline decoration-line underline-offset-4 hover:text-gold" rel="noopener noreferrer">

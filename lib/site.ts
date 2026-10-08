@@ -55,6 +55,7 @@ export const NAV = [
   { href: "/origins", label: "시대" },
   { href: "/map", label: "지도" },
   { href: "/rulers", label: "파라오" },
+  { href: "/family-tree", label: "가족관계도" },
   { href: "/cleopatra", label: "클레오파트라" },
   { href: "/gods", label: "신" },
   { href: "/daily", label: "일상" },
@@ -82,6 +83,12 @@ export const HOME_SECTIONS = [
     en: "Pharaohs",
     title: "파라오",
     desc: "쿠푸, 하트셉수트, 아케나텐, 투탕카멘, 람세스 2세, 클레오파트라 7세 등 길을 잡는 열두 사람.",
+  },
+  {
+    href: "/family-tree",
+    en: "Family Tree",
+    title: "가족관계도",
+    desc: "신화의 신들, 18·19왕조, 프톨레마이오스 가계. 확실한 혈연과 다투는 혈연을 선으로 나눕니다.",
   },
   {
     href: "/cleopatra",
