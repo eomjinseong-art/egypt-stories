@@ -8,7 +8,8 @@
  * col은 가계도 전체에서 같은 세로줄입니다. 같은 가로줄에서는 col 차이를 1.2 이상으로 둡니다.
  */
 
-import { ROME_URL } from "@/lib/site";
+import type { LinkItem } from "@/data/types";
+import { GREECE_URL, ROME_URL } from "@/lib/site";
 
 export type TreeId = "myth" | "d18" | "d19" | "ptolemy";
 export type LinkKind = "parent" | "spouse" | "variant-parent" | "variant-spouse";
@@ -23,6 +24,8 @@ export type TreeSeed = {
   /** Absolute top of the card, in pixels. */
   y: number;
   href?: string;
+  /** Extra pages on sister sites. Rendered apart from the card's own link. */
+  also?: readonly LinkItem[];
   guestTag?: string;
   /** Short label under the English name. Reigns are BCE. */
   years?: string;
@@ -1264,6 +1267,7 @@ const PTOLEMY_SEEDS: TreeSeed[] = [
     band: "early",
     col: 2.4,
     y: y(0),
+    also: [{ href: `${GREECE_URL}/family-tree?tree=successors&focus=ptolemy-i`, label: "그리스이야기 · 프톨레마이오스 1세" }],
     years: "305–282",
     summary: "알렉산드로스의 부하에서 이집트의 왕이 된 사람입니다. 왕을 칭한 때는 기원전 305년 무렵이고, 그 전 323년부터는 총독이었습니다.",
     aliases: ["ptolemy i", "ptolemy 1", "soter", "프톨레마이오스 1세", "프톨레마이오스"],
@@ -1516,6 +1520,7 @@ const PTOLEMY_SEEDS: TreeSeed[] = [
     col: 0.6,
     y: y(10),
     href: `${ROME_URL}/cleopatra`,
+    also: [{ href: `${ROME_URL}/family-tree?tree=julio&focus=caesar`, label: "로마이야기 · 카이사르의 가계" }],
     guestTag: "로마",
     years: "생몰 100–44",
     summary: "로마의 장군입니다. 기원전 48–47년 알렉산드리아의 왕위 다툼에 끼어, 클레오파트라 7세를 왕위에 다시 앉힙니다. 카이사리온의 아버지로 고대부터 전합니다.",
@@ -1529,6 +1534,7 @@ const PTOLEMY_SEEDS: TreeSeed[] = [
     col: 3.0,
     y: y(10),
     href: `${ROME_URL}/wars/actium`,
+    also: [{ href: `${ROME_URL}/family-tree?tree=julio&focus=antony`, label: "로마이야기 · 안토니우스의 가계" }],
     guestTag: "로마",
     years: "생몰 83–30",
     summary: "카이사르 사후 로마의 동방을 맡은 장군입니다. 클레오파트라 7세와 세 자녀를 두었고, 기원전 31년 악티움에서 진 뒤 이듬해 죽습니다.",

@@ -1,5 +1,5 @@
 import type { GodCard, Guide, Source } from "@/data/types";
-import { MYTH_URL } from "@/lib/site";
+import { GREECE_URL, MYTH_URL } from "@/lib/site";
 
 export const godsIntro: Guide = {
   en: "HOW TO READ",
@@ -40,6 +40,7 @@ export const gods: readonly GodCard[] = [
       { href: "/map#thebes", label: "테베" },
       { href: "/wars/alexander", label: "시와 오아시스" },
       { href: `${MYTH_URL}/gods/zeus`, label: "나두신화 · 제우스" },
+      { href: `${GREECE_URL}/people/alexander`, label: "그리스이야기 · 알렉산드로스 (시와)" },
     ],
   },
   {

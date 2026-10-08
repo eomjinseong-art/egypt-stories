@@ -1,6 +1,7 @@
-import type { Guide, Kind, Source } from "@/data/types";
+import type { Guide, Kind, LinkItem, Source } from "@/data/types";
+import { ROME_URL } from "@/lib/site";
 
-export type CleoSection = Guide & { id: string; kind: Kind };
+export type CleoSection = Guide & { id: string; kind: Kind; elsewhere?: readonly LinkItem[] };
 
 export const cleoSections: readonly CleoSection[] = [
   {
@@ -83,6 +84,7 @@ export const cleoSections: readonly CleoSection[] = [
       "클레오파트라 셀레네는 살아남아 북아프리카의 마우레타니아 왕실로 갑니다. ‘이집트 왕조가 그날 피로 완전히 끊겼다’는 한 줄은 아이들 전체에는 해당하지 않습니다.",
       "바다 전투의 로마 쪽 설명은 [로마이야기의 악티움](https://rome-stories.vercel.app/wars/actium)에 있습니다.",
     ],
+    elsewhere: [{ href: `${ROME_URL}/rulers/augustus`, label: "로마이야기 · 아우구스투스" }],
   },
 ];
 

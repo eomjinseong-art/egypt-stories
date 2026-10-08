@@ -1,8 +1,10 @@
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { Elsewhere } from "@/components/Elsewhere";
 import { FamilyTreeView } from "@/components/FamilyTreeView";
 import { JsonLd } from "@/components/JsonLd";
 import { PageHead } from "@/components/PageHead";
+import { SisterCrossLinks } from "@/components/SisterLinks";
 import { SourceList } from "@/components/SourceList";
 import { gods } from "@/data/gods";
 import {
@@ -15,7 +17,7 @@ import {
 } from "@/data/family-tree";
 import { rulerBySlug } from "@/data/rulers";
 import { breadcrumbLd, itemListLd, jsonLd, pageMetadata } from "@/lib/seo";
-import { ROME_URL } from "@/lib/site";
+import { OTHER_FAMILY_TREES, ROME_URL, sisterOriginAllowed } from "@/lib/site";
 
 const description =
   "이집트 신화의 아툼-라 가계, 제18왕조, 제19왕조, 프톨레마이오스 왕조를 세대별로 그린 가족관계도. 투탕카멘의 부모처럼 불확실한 혈연은 점선으로 구분합니다.";
@@ -34,23 +36,24 @@ const godSlugs = new Set(gods.map((god) => god.slug));
 
 for (const chart of FAMILY_CHARTS) {
   for (const node of chart.layout.nodes) {
-    if (!node.href) continue;
-    if (node.href.startsWith("/rulers/")) {
+    if (node.href?.startsWith("/rulers/")) {
       const slug = node.href.slice("/rulers/".length);
       if (!rulerBySlug(slug)) throw new Error(`가족관계도 파라오 링크가 없습니다: ${node.id} ${node.href}`);
-      continue;
-    }
-    if (node.href.startsWith("/gods#")) {
+    } else if (node.href?.startsWith("/gods#")) {
       const slug = node.href.slice("/gods#".length);
       if (!godSlugs.has(slug)) throw new Error(`가족관계도 신 링크가 없습니다: ${node.id} ${node.href}`);
-      continue;
-    }
-    if (node.href.startsWith(`${ROME_URL}/`)) {
+    } else if (node.href?.startsWith(`${ROME_URL}/`)) {
       const path = node.href.slice(ROME_URL.length);
       if (!ROME_OK.has(path)) throw new Error(`가족관계도 로마이야기 링크가 목록에 없습니다: ${node.id} ${node.href}`);
-      continue;
+    } else if (node.href) {
+      throw new Error(`가족관계도 링크를 확인할 수 없습니다: ${node.id} ${node.href}`);
     }
-    throw new Error(`가족관계도 링크를 확인할 수 없습니다: ${node.id} ${node.href}`);
+    for (const extra of node.also ?? []) {
+      // Origin check only. iliad-stories is allowlisted and may 404 until that site ships; do not fetch.
+      if (!sisterOriginAllowed(extra.href)) {
+        throw new Error(`가족관계도 다른 사이트 링크가 허용 목록에 없습니다: ${node.id} ${extra.href}`);
+      }
+    }
   }
 }
 
@@ -89,6 +92,7 @@ export default function FamilyTreePage() {
         ))}
       </section>
 
+      <SisterCrossLinks title="다른 가족관계도" en="Other family trees" links={OTHER_FAMILY_TREES} />
       <SourceList sources={familyTreeSources} />
     </div>
   );
@@ -121,6 +125,7 @@ function ChartText({ chart }: { chart: FamilyChart }) {
                   {node.href ? <PersonLink href={node.href} /> : null}
                   <span className="mt-0.5 block text-ink">{node.summary}</span>
                   {node.note ? <span className="mt-0.5 block text-xs leading-5 text-dusk">불확실·다른 전승: {node.note}</span> : null}
+                  <Elsewhere links={node.also} />
                   <span className="mt-1 block text-xs leading-5 text-muted">
                     <Kin chartId={chart.id} label="부모" people={rel.parents} />
                     <Kin chartId={chart.id} label="불확실한 부모" people={rel.variantParents} />
