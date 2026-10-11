@@ -19,6 +19,12 @@ export const ROME_NAME = "로마이야기";
 export const GREECE_URL = "https://greece-stories.vercel.app";
 export const GREECE_NAME = "그리스이야기";
 
+export const GERMANIC_URL = "https://germanic-stories.vercel.app";
+export const GERMANIC_NAME = "게르만이야기";
+
+export const VIKING_URL = "https://viking-stories.vercel.app";
+export const VIKING_NAME = "바이킹이야기";
+
 export const PERSIA_URL = "https://persia-stories.vercel.app";
 export const PERSIA_NAME = "페르시아이야기";
 
@@ -30,6 +36,9 @@ export const PHILOSOPHY_NAME = "철학이야기";
 
 export const KOREA_URL = "https://korea-stories.vercel.app";
 export const KOREA_NAME = "대한민국이야기";
+
+export const WORLD_URL = "https://nadoo-world.vercel.app";
+export const WORLD_NAME = "나두세계";
 
 export const TIMELINE_URL = "https://nadoo-timeline.vercel.app";
 export const TIMELINE_NAME = "나두연표";
@@ -51,11 +60,14 @@ export const SISTER_ORIGINS = [
   ILIAD_URL,
   GREECE_URL,
   ROME_URL,
+  GERMANIC_URL,
+  VIKING_URL,
   SITE_URL,
   PERSIA_URL,
   CHOSEN_URL,
   PHILOSOPHY_URL,
   KOREA_URL,
+  WORLD_URL,
   TIMELINE_URL,
   HUB_URL,
 ] as const;
@@ -94,6 +106,18 @@ export const SISTERS = [
     desc: "클레오파트라, 카이사르, 악티움. 이집트가 로마의 곡물 창고가 된 뒤의 정치.",
   },
   {
+    href: GERMANIC_URL,
+    name: GERMANIC_NAME,
+    en: "Germanic",
+    desc: "로마에 맞선 게르만 부족들. 이집트와는 직접 닿지 않고, 로마의 북쪽 국경 이야기입니다.",
+  },
+  {
+    href: VIKING_URL,
+    name: VIKING_NAME,
+    en: "Vikings",
+    desc: "롱쉽을 타고 온 북쪽 사람들. 동쪽 강길로 비잔티움과 이슬람 세계의 은화에 닿았습니다.",
+  },
+  {
     href: PERSIA_URL,
     name: PERSIA_NAME,
     en: "Persia",
@@ -118,6 +142,12 @@ export const SISTERS = [
     desc: "같은 해의 한반도. 피라미드 시대와 삼국을 나란히 보는 비교입니다.",
   },
   {
+    href: WORLD_URL,
+    name: WORLD_NAME,
+    en: "World",
+    desc: "나두의 세계 이야기를 한곳에서 둘러봅니다.",
+  },
+  {
     href: TIMELINE_URL,
     name: TIMELINE_NAME,
     en: "Timeline",
@@ -134,6 +164,8 @@ export const SISTERS = [
 /** Shared row A. This site's own family tree is omitted. */
 export const OTHER_FAMILY_TREES = [
   { href: `${ROME_URL}/family-tree`, label: "로마이야기 가족관계도", en: "Rome" },
+  { href: `${GERMANIC_URL}/family-tree`, label: "게르만이야기 가족관계도", en: "Germanic" },
+  { href: `${VIKING_URL}/family-tree`, label: "바이킹이야기 가족관계도", en: "Vikings" },
   { href: `${GREECE_URL}/family-tree`, label: "그리스이야기 가족관계도", en: "Greece" },
   { href: `${PERSIA_URL}/family-tree`, label: "페르시아이야기 가족관계도", en: "Persia" },
   { href: `${KOREA_URL}/family-tree`, label: "대한민국이야기 가족관계도", en: "Korea" },
@@ -144,6 +176,8 @@ export const OTHER_FAMILY_TREES = [
 /** Shared row B. This site's own film list is omitted. */
 export const OTHER_FILMS = [
   { href: `${ROME_URL}/movies`, label: "로마이야기 영화", en: "Rome" },
+  { href: `${GERMANIC_URL}/films`, label: "게르만이야기 영화", en: "Germanic" },
+  { href: `${VIKING_URL}/films`, label: "바이킹이야기 영화", en: "Vikings" },
   { href: `${GREECE_URL}/movies`, label: "그리스이야기 영화", en: "Greece" },
   { href: `${PERSIA_URL}/movies`, label: "페르시아이야기 영화", en: "Persia" },
   { href: `${KOREA_URL}/films`, label: "대한민국이야기 영화", en: "Korea" },
