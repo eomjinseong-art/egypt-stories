@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Rich } from "@/components/Rich";
 import { moviesBySlugs, moviesByTopic } from "@/data/movies";
 import type { Movie, MovieTopic } from "@/data/types";
 
@@ -13,7 +14,7 @@ export function MovieCard({ movie }: { movie: Movie }) {
         </span>
       </p>
       <p className="mt-2 text-sm leading-7">{movie.why}</p>
-      <p className="mt-2 text-sm leading-7 text-muted">{movie.fiction}</p>
+      <p className="mt-2 text-sm leading-7 text-muted"><Rich text={movie.fiction} /></p>
       {movie.links.length ? (
         <p className="mt-2 flex flex-wrap gap-x-3 gap-y-1 text-sm">
           {movie.links.map((link) =>
