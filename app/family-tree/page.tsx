@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Elsewhere } from "@/components/Elsewhere";
 import { FamilyTreeView } from "@/components/FamilyTreeView";
+import { TreePanel } from "@/components/TreePanel";
 import { JsonLd } from "@/components/JsonLd";
 import { PageHead } from "@/components/PageHead";
 import { SisterCrossLinks } from "@/components/SisterLinks";
@@ -88,7 +89,9 @@ export default function FamilyTreePage() {
           그림과 같은 관계입니다. 이름을 누르면 그 가계의 그 사람으로 이동합니다. 이 사이트에 글이 있는 이름은 따로 링크했습니다.
         </p>
         {FAMILY_CHARTS.map((chart) => (
-          <ChartText key={chart.id} chart={chart} />
+          <TreePanel key={chart.id} id={chart.id} defaultId="myth">
+            <ChartText chart={chart} />
+          </TreePanel>
         ))}
       </section>
 
