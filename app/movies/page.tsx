@@ -6,6 +6,7 @@ import { SisterCrossLinks } from "@/components/SisterLinks";
 import { movies } from "@/data/movies";
 import { OTHER_FILMS } from "@/lib/site";
 import { breadcrumbLd, itemListLd, jsonLd, pageMetadata } from "@/lib/seo";
+import { NadooHubFilmsLink } from "@/components/NadooHubLink";
 
 export const metadata = pageMetadata({
   title: "관련 영화",
@@ -41,6 +42,7 @@ export default function MoviesPage() {
         ))}
       </ul>
       <SisterCrossLinks title="다른 사이트의 영화" en="Films on sister sites" links={OTHER_FILMS} />
+      <NadooHubFilmsLink />
     </div>
   );
 }
