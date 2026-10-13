@@ -12,6 +12,7 @@ import { Rich } from "@/components/Rich";
 import { SourceList } from "@/components/SourceList";
 import { warBySlug, wars } from "@/data/wars";
 import { articleLd, breadcrumbLd, jsonLd, pageMetadata } from "@/lib/seo";
+import { CoupangCard } from "@/components/CoupangCard";
 
 export function generateStaticParams() {
   return wars.map((war) => ({ slug: war.slug }));
@@ -87,6 +88,7 @@ export default async function WarPage({ params }: { params: Promise<{ slug: stri
         prev={prev ? { href: `/wars/${prev.slug}`, label: prev.title } : undefined}
         next={next ? { href: `/wars/${next.slug}`, label: next.title } : undefined}
       />
+      <CoupangCard />
     </article>
   );
 }

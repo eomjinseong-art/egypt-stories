@@ -5,6 +5,7 @@ import { rulers } from "@/data/rulers";
 import { wars } from "@/data/wars";
 import { jsonLd, pageMetadata, websiteLd } from "@/lib/seo";
 import { BRAND_LINE, FAMILY_LABEL, GREECE_NAME, GREECE_URL, HOME_SECTIONS, MYTH_NAME, MYTH_URL, ROME_NAME, ROME_URL, SITE_SUB, SITE_TAGLINE, SISTERS } from "@/lib/site";
+import { CoupangCard } from "@/components/CoupangCard";
 
 export const metadata = pageMetadata({
   title: "홈",
@@ -53,6 +54,7 @@ export default function Home() {
         </div>
       </section>
 
+      <CoupangCard />
       <div className="dentil opacity-50" aria-hidden />
 
       <section className="mt-10" aria-labelledby="sisters-heading">
