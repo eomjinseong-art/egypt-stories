@@ -196,11 +196,18 @@ export const NAV = [
   { href: "/daily", label: "일상" },
   { href: "/monuments", label: "유적" },
   { href: "/wars", label: "전쟁" },
+  { href: "/generals", label: "장군" },
   { href: "/movies", label: "영화" },
   { href: "/sources", label: "출처" },
 ] as const;
 
 export const HOME_SECTIONS = [
+  {
+    href: "/generals",
+    en: "Generals",
+    title: "유명한 장군",
+    desc: "아흐모세, 투트모세 3세, 카데시의 람세스 2세, 프톨레마이오스 1세까지. 왕이 곧 장군이던 이집트의 6명.",
+  },
   {
     href: "/origins",
     en: "Origins",

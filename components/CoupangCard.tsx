@@ -1,6 +1,6 @@
 const COUPANG_CARD_URL = "https://link.coupang.com/a/hsdzLh1vB6";
 
-const COPY = {
+const DEFAULT_COPY = {
   icon: "🏺",
   ko: "피라미드는 20년 걸렸지만, 배송은 하루면 돼요",
   en: "Pyramids took decades. Delivery takes a day.",
@@ -20,7 +20,14 @@ const CSS = `
  * 본문 중간용 쿠팡 파트너스 카드 (광고). 카드 전체가 하나의 링크입니다.
  * 팝업·고정 오버레이 없이 본문 흐름 안에만 놓습니다. 한 페이지에 1~2개까지만 사용하세요.
  */
-export function CoupangCard({ className = "" }: { className?: string }) {
+export function CoupangCard({
+  className = "",
+  copy,
+}: {
+  className?: string;
+  copy?: { icon: string; ko: string; en: string };
+}) {
+  const COPY = copy ?? DEFAULT_COPY;
   return (
     <>
       <style dangerouslySetInnerHTML={{ __html: CSS }} />
