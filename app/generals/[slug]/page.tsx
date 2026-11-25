@@ -1,3 +1,4 @@
+import { NadooAd } from "@/components/NadooAd";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { CoupangCard } from "@/components/CoupangCard";
@@ -74,6 +75,7 @@ export default async function GeneralPage({ params }: { params: Promise<{ slug: 
         <p className="mt-8 text-sm leading-7 text-muted">이 장군을 중심에 둔 유명한 극영화는 드뭅니다.</p>
       )}
       <GLinks title="다른 사이트에서 같은 사람 보기" links={g.cross} />
+      <NadooAd inline />
       <section className="mt-8 text-sm leading-7">
         <h2 className="font-serif text-lg text-ink">출처</h2>
         <ul className="mt-1 list-disc pl-5 text-muted">

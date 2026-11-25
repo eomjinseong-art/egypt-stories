@@ -1,3 +1,4 @@
+import { NadooAd } from "@/components/NadooAd";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Elsewhere } from "@/components/Elsewhere";
@@ -46,6 +47,7 @@ export default function OriginsPage() {
           </GuideBlock>
         ))}
       </div>
+      <NadooAd inline />
       <p className="mt-6 text-sm leading-7 text-muted">
         강과 도시는 <Link href="/map" className="text-nile underline decoration-line underline-offset-4 hover:text-gold">지도</Link>
         로, 사람 이름은 <Link href="/rulers" className="text-nile underline decoration-line underline-offset-4 hover:text-gold">파라오</Link>로 가면 됩니다.

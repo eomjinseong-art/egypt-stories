@@ -1,3 +1,4 @@
+import { NadooAd } from "@/components/NadooAd";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Elsewhere } from "@/components/Elsewhere";
@@ -57,6 +58,7 @@ export default function CleopatraPage() {
           </GuideBlock>
         ))}
       </div>
+      <NadooAd inline />
       <p className="mt-6 text-sm leading-7">
         1세부터 7세의 형제와 자녀까지 선으로 보려면 <Link href="/family-tree?tab=ptolemy&focus=cleopatra-vii" className="text-nile underline decoration-line underline-offset-4 hover:text-gold">가족관계도</Link>를 엽니다. 어머니의 이름은 거기에서도 점선입니다.
       </p>

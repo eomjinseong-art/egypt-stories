@@ -1,3 +1,4 @@
+import { NadooAd } from "@/components/NadooAd";
 import Link from "next/link";
 import { CoupangCard } from "@/components/CoupangCard";
 import { GCrumbs, GLinks } from "@/components/GLinks";
@@ -50,6 +51,7 @@ export default function GeneralsPage() {
           </section>
         );
       })}
+      <NadooAd inline />
       <div className="mx-auto max-w-3xl">
         <GLinks title="이어서 보기" links={GENERALS_SEE_ALSO} />
       </div>

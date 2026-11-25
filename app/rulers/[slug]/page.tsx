@@ -1,3 +1,4 @@
+import { NadooAd } from "@/components/NadooAd";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
@@ -82,6 +83,7 @@ export default async function RulerPage({ params }: { params: Promise<{ slug: st
           </p>
         ))}
       </More>
+      <NadooAd inline />
       <RelatedLinks links={ruler.related} />
       {ruler.movieSlugs.length ? (
         <RelatedMovies slugs={ruler.movieSlugs} />

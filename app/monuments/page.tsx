@@ -1,3 +1,4 @@
+import { NadooAd } from "@/components/NadooAd";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { GuideBlock } from "@/components/GuideBlock";
 import { JsonLd } from "@/components/JsonLd";
@@ -30,6 +31,7 @@ export default function MonumentsPage() {
         title="피라미드·신전·무덤"
         lead="돌이 많이 남은 이유는 이집트 사람이 돌에서만 살아서가 아닙니다. 집은 진흙이었고, 왕과 신의 자리는 돌로 남겼습니다. 어떻게 쌓았는지는 일부가 밝혀졌고, 일부가 아직 논쟁입니다."
       />
+      <NadooAd inline />
       <div className="mt-8 space-y-4">
         {monuments.map((item) => (
           <GuideBlock key={item.id} id={item.id} en={item.en} title={item.title} summary={item.summary} points={item.points} more={item.more} kind={item.kind} />

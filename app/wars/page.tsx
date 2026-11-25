@@ -1,3 +1,4 @@
+import { NadooAd } from "@/components/NadooAd";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CauseGrid } from "@/components/CauseGrid";
@@ -35,6 +36,7 @@ export default function WarsPage() {
         title="전쟁"
         lead="이집트의 삼천 년은 평화로만 이루어지지 않았습니다. 각 카드는 왜, 누구와, 끝나서 무엇이 바뀌었는지만 먼저 보여 줍니다. 출애굽 영화의 전투는 이 목록의 사건이 아닙니다."
       />
+      <NadooAd inline />
       <ul className="mt-8 grid gap-4 lg:grid-cols-2">
         {wars.map((war) => (
           <li key={war.slug} className="rounded-lg border border-line bg-card p-5">

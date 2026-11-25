@@ -1,3 +1,4 @@
+import { NadooAd } from "@/components/NadooAd";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Elsewhere } from "@/components/Elsewhere";
@@ -81,6 +82,7 @@ export default function FamilyTreePage() {
         lead="누가 누구의 자녀인지 세대별로 그린 그림입니다. 예를 들어 호루스는 오시리스와 이시스의 아들이고, 하트셉수트는 투트모세 2세의 이복 누이이자 아내입니다. 칸을 누르면 부모·배우자·자녀·형제가 밝아집니다."
       />
       <p className="mt-3 max-w-3xl text-sm leading-7 text-muted">{CHRONOLOGY_NOTE}</p>
+      <NadooAd inline />
       <FamilyTreeView />
 
       <section className="mt-12">
