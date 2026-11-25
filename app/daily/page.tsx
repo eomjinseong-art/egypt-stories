@@ -1,3 +1,4 @@
+import { NadooAd } from "@/components/NadooAd";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { GuideBlock } from "@/components/GuideBlock";
 import { JsonLd } from "@/components/JsonLd";
@@ -26,6 +27,7 @@ export default function DailyPage() {
       />
       <Breadcrumbs items={[{ href: "/", label: "홈" }, { label: "일상" }]} />
       <PageHead kicker="DAILY LIFE" title="일상" lead={dailyLead} />
+      <NadooAd inline />
       <div className="mt-8 space-y-4">
         {dailyTopics.map((topic) => (
           <GuideBlock key={topic.id} id={topic.id} en={topic.en} title={topic.title} summary={topic.summary} points={topic.points} more={topic.more} kind="history" />

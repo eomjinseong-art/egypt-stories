@@ -1,3 +1,4 @@
+import { NadooAd } from "@/components/NadooAd";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { JsonLd } from "@/components/JsonLd";
 import { MovieCard } from "@/components/RelatedMovies";
@@ -36,6 +37,7 @@ export default function MoviesPage() {
         title="관련 영화"
         lead="이집트를 처음 상상할 때 영화가 먼저인 경우가 많습니다. 제목은 실제로 공개된 작품만 적었습니다. 『이집트 왕자』는 애니메이션이고, 출애굽 영화들은 신앙의 이야기입니다. 『사카라 무덤의 비밀』은 2020년 넷플릭스 다큐멘터리로, 사카라 발굴을 따라갑니다. 각 카드는 왜 보면 좋은지, 어디가 창작인지 나눕니다. 스트리밍 링크는 없습니다."
       />
+      <NadooAd inline />
       <ul className="mt-8 space-y-3">
         {movies.map((movie) => (
           <MovieCard key={movie.slug} movie={movie} />

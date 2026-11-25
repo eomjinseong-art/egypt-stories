@@ -1,3 +1,4 @@
+import { NadooAd } from "@/components/NadooAd";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { GuideBlock } from "@/components/GuideBlock";
 import { JsonLd } from "@/components/JsonLd";
@@ -29,6 +30,7 @@ export default function MapPage() {
         title="지도"
         lead="이집트 지도에서 가장 먼저 강을 따라가세요. 상이집트는 남쪽, 하이집트는 북쪽 삼각주입니다. 아래 카드는 강, 두 땅, 그리고 글에서 자주 나오는 여섯 자리입니다. 경계는 세기마다 움직였습니다."
       />
+      <NadooAd inline />
       <div className="mt-8 space-y-12">
         {regions.map((region) => (
           <section key={region.id} id={region.id} className="scroll-mt-28">

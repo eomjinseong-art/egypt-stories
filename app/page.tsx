@@ -1,3 +1,4 @@
+import { NadooAd } from "@/components/NadooAd";
 import Link from "next/link";
 import { JsonLd } from "@/components/JsonLd";
 import { eras } from "@/data/eras";
@@ -77,6 +78,7 @@ export default function Home() {
         </ul>
       </section>
 
+      <NadooAd inline />
       <section className="mt-12" aria-labelledby="era-heading">
         <h2 id="era-heading" className="font-serif text-2xl text-ink">
           여섯 시대

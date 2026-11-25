@@ -1,3 +1,4 @@
+import { NadooAd } from "@/components/NadooAd";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
@@ -64,6 +65,7 @@ export default async function WarPage({ params }: { params: Promise<{ slug: stri
       </header>
       <CauseGrid cause={war.cause} who={war.who} result={war.result} />
       <KeyPoints items={war.points} />
+      <NadooAd inline />
       <More>
         {war.more.map((paragraph) => (
           <p key={paragraph}>

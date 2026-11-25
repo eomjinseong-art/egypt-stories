@@ -1,3 +1,4 @@
+import { NadooAd } from "@/components/NadooAd";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { PageHead } from "@/components/PageHead";
 import { pageMetadata } from "@/lib/seo";
@@ -71,6 +72,7 @@ export default function SourcesPage() {
         </ul>
       </section>
 
+      <NadooAd inline />
       <section className="mt-8">
         <h2 className="font-serif text-xl text-ink">물건과 자리</h2>
         <ul className="mt-3 space-y-2 text-sm leading-7">

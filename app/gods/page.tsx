@@ -1,3 +1,4 @@
+import { NadooAd } from "@/components/NadooAd";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { GuideBlock } from "@/components/GuideBlock";
@@ -37,6 +38,7 @@ export default function GodsPage() {
         <GuideBlock en={godsIntro.en} title={godsIntro.title} summary={godsIntro.summary} points={godsIntro.points} more={godsIntro.more} kind="mixed" />
       </div>
 
+      <NadooAd inline />
       <ul className="mt-8 grid gap-3 sm:grid-cols-2">
         {gods.map((god) => (
           <li key={god.slug} id={god.slug} className="scroll-mt-28 rounded-lg border border-line bg-card p-4">
