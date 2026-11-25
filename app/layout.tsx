@@ -15,7 +15,7 @@ const serif = Noto_Serif_KR({ subsets: ["latin"], variable: "--font-noto-serif",
 const description = `${SITE_TAGLINE}. ${SITE_SUB}`;
 
 export const metadata: Metadata = {
-  verification: { google: "LglMaYLzS6dacAPQ5ZgZdPgzdtfLbp_1Rk5vh3WNPlM" },
+  verification: { google: "LglMaYLzS6dacAPQ5ZgZdPgzdtfLbp_1Rk5vh3WNPlM", other: { "naver-site-verification": "a422d6867add75ae4eec347562eaad937e6a434e" } },
   metadataBase: new URL(SITE_URL),
   title: { default: `${SITE_NAME} · 쉬운 이집트 역사`, template: `%s · ${SITE_NAME}` },
   description,
